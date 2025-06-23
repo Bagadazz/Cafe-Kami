@@ -1,0 +1,150 @@
+/* Import font and setup dark theme variables */
+:root {
+    --primary-dark: #0a0a0a;
+    --secondary-dark: #1a1a1a;
+    --tertiary-dark: #2a2a2a;
+    --accent-gold: #d4af37;
+    --accent-copper: #b87333;
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --text-muted: #888888;
+    --border-color: #333333;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --shadow-dark: rgba(0, 0, 0, 0.5);
+    --gradient-primary: linear-gradient(135deg, var(--accent-gold), var(--accent-copper));
+    --gradient-bg: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--gradient-bg);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: var(--text-primary);
+}
+
+/* Login container with glass effect */
+.container {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px var(--shadow-dark);
+    padding: 40px;
+    border-radius: 20px;
+    width: 400px;
+    text-align: center;
+}
+
+/* Title */
+.container h2 {
+    font-size: 28px;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+/* Labels */
+label {
+    display: block;
+    text-align: left;
+    margin: 15px 0 5px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.07);
+    color: var(--text-primary);
+    box-sizing: border-box;
+}
+
+/* Button with primary gradient */
+button {
+    width: 100%;
+    padding: 12px;
+    background: var(--gradient-primary);
+    color: var(--primary-dark);
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+button:hover::before {
+    left: 100%;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(212, 175, 55, 0.4);
+}
+
+/* Back button */
+.back-button {
+    margin-top: 20px;
+}
+
+.back-button a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 14px;
+    padding: 8px 16px;
+    border: 1px solid var(--glass-border);
+    border-radius: 6px;
+    display: inline-block;
+    backdrop-filter: blur(10px);
+    background: var(--glass-bg);
+    transition: all 0.3s ease;
+}
+
+.back-button a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+/* Scrollbar styling for consistency */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--secondary-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gradient-primary);
+    border-radius: 4px;
+}
