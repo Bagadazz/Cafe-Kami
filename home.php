@@ -86,8 +86,8 @@
 
     <!-- Footer -->
     <footer class="footer" id="about">
-        <p>&copy; 2025 Café Kami. </p>
-        <p>☎️ (+62)0812xxxxxxx </p>
+        <p>&copy; 2025 Café Kami </p>
+        <p>☎️ (+62)23-7632-9797 </p>
     </footer>
 
     <script>
