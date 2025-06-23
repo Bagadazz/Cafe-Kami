@@ -55,7 +55,7 @@ body::before {
     z-index: -1;
 }
 
-/* Kontainer utama dengan glassmorphism */
+
 .container {
     background: var(--glass-bg);
     backdrop-filter: blur(20px);
