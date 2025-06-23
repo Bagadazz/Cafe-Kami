@@ -20,7 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `cafe_db`
 --
-
+CREATE DATABASE cafe_db;
+USE cafe_db;
 -- --------------------------------------------------------
 
 --
